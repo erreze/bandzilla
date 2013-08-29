@@ -77,10 +77,17 @@ function addtrack(ix, sound_url){
         });
 }
 
-          
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+}
+
 $(document).ready(function() {
+  var s = getURLParameter('s');
+  console.log(s);
   $.ajax({
-       url:"http://172.16.1.175:8888/data/tracks.php?callback=cb",
+       url:"http://172.16.1.175:8888/data/tracks.php?callback=cb&s="+s,
        dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
        success:function(json){
            // do stuff with json (in this case an array)
