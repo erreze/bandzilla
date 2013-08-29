@@ -1,0 +1,38 @@
+.artwork {
+  margin: 0px 4px 15px 4px !important;
+}
+#slider .slider .flex-control-nav li a {
+  background-color: grey;
+  border: solid 1px white;
+}
+#main .news.homepage article {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#main .news article {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#main .events article .bottom .right {
+  width: 100%;
+}
+#main .events article .bottom .right br {
+  display: none;
+}
+#main .events article .bottom .right .star-rating a {
+  width: 20px;
+  height: 20px;
+}
+.new-albums.list .new-album-box {
+  background-color: white;
+}
+.countdown {
+  display: none !important;
+}
+aside #calendar .calendar tbody td {
+  z-index: 2000;
+}
+aside #calendar .calendar tbody td .notification {
+  left: 0;
+  top: 0;
+}

@@ -1,5 +1,11 @@
-<head>
-  <script type="text/javascript" src="js/vendor/jquery-1.9.0.min.js">
+<!DOCTYPE html>
+<html >
+<head 
+
+>
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+
+  <script src="js/vendor/jquery-1.9.0.min.js"></script>
   </script>
   <script type="text/javascript" src="js/third/jplayer/jquery.jplayer.min.js"></script>
   <!-- // <script type="text/javascript" src="js/angular/1.1.5/angular.min.js"></script> -->
@@ -13,78 +19,19 @@
 
     <script type="text/javascript" src="js/chart/Lib/js/dx.chartjs.js"></script>
 
-    <script type="text/javascript" src="js/main2.js"></script>
 
-  <script type="text/javascript">
-      $(function ()  
-        {
-           $("#chartContainer").dxRangeSelector({
-            margin: {
-                top: 5
-            },
-            size: {
-                height: 100,
-                width:2000,
-            },
-            scale: {
-                minorTickInterval: 0.001,
-                majorTickInterval: 0.005,
-                label: {
-                    format: "fixedPoint",
-                    precision: 3
-                }
-            },
-            sliderMarker: {
-                format: "fixedPoint",
-                precision: 4,
-                customizeText: function () {
-                    return this.valueText + " sec";
-                }
-            },
-            behavior: {
-                snapToTicks: false
-            },
-            dataSource: [0.01564, 0.04976, 0.004563, 0.02258, 0.01051, 0.03214, 0.02906]
-           });
+    
+     <script type="text/javascript" src='js/firebase.js'></script>
+     <script type="text/javascript" src="js/angular/1.0.7/angular.js"></script>
+     <script src="js/angularFire.js"></script>
 
-            $("#chartContainer2").dxRangeSelector({
-            margin: {
-                left: 100,
-                top: 5
-            },
-            size: {
-                height: 100
-            },
-            scale: {
-                minorTickInterval: 0.001,
-                majorTickInterval: 0.005,
-                label: {
-                    format: "fixedPoint",
-                    precision: 3
-                }
-            },
-            sliderMarker: {
-                format: "fixedPoint",
-                precision: 4,
-                customizeText: function () {
-                    return this.valueText + " sec";
-                }
-            },
-            behavior: {
-                snapToTicks: false
-            },
-            dataSource: [0.01564, 0.04976, 0.004563, 0.02258, 0.01051, 0.03214, 0.02906]
-           });
-        }
-      );
-    </script>
+    
+
 
 </head>
 <body >
-    <div>
-    	<div id="jpId"></div>
-  		<button id="omg">play</button>
-      <div id="chartContainer" style="width: 100%; "></div>
-      <div id="chartContainer2" style="width: 100%; "></div>
+    <div id="trackContainer">
     </div>
+    <script type="text/javascript" src="js/main2.js"></script>
 </body>
+</html>

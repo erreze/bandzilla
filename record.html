@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head 
+
+>
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+
+  <script src="js/vendor/jquery-1.9.0.min.js"></script>
+  </script>
+  <script type="text/javascript" src="js/third/jplayer/jquery.jplayer.min.js"></script>
+
+
+  <!-- <input type="file" accept="audio/*;capture=microphone"> -->
+
+  <script>
+var onFail = function(e) {
+        console.log('Rejected!', e);
+      };
+
+      var onSuccess = function(s) {
+        var context = new webkitAudioContext();
+        var mediaStreamSource = context.createMediaStreamSource(s);
+        recorder = new Recorder(mediaStreamSource);
+        recorder.record();
+
+        // audio loopback
+        // mediaStreamSource.connect(context.destination);
+      }
+
+      window.URL = window.URL || window.webkitURL;
+      navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+      var recorder;
+      var audio = document.querySelector('audio');
+
+      function startRecording() {
+        if (navigator.getUserMedia) {
+          navigator.getUserMedia({audio: true}, onSuccess, onFail);
+        } else {
+          console.log('navigator.getUserMedia not present');
+        }
+      }
+
+      function stopRecording() {
+        recorder.stop();
+        recorder.exportWAV(function(s) {
+          audio.src = window.URL.createObjectURL(s);
+        });
+      }
+    </script>
+
+</head>
+<body >
+    <div id="trackContainer">
+    </div>
+    <button onclick="startRecording()">start recording</button>
+    <button onclick="stopRecording()">stop recording</button>
+</body>
+</html>
+
+
