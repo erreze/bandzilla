@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mp3PL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel=stylesheet href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" type="text/css" href="css/green-theme.css">
+        <!--<link rel="stylesheet" type="text/css" href="css/pink-theme.css">-->
+        <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/jquery.countdown.css" />
+        <link rel="stylesheet" href="mp3js/blue.monday/jplayer.blue.monday.css" />
+        <!--[if lt IE 9]>
+        <link href="css/ie8.css" rel="stylesheet" type="text/css" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="mp3js/jquery.jplayer.min.js"></script>
+        <script type="text/javascript" src="mp3js/jplayer.playlist.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript" src="js/tinynav.min.js"></script>
+        <script type="text/javascript" src='js/jquery.placeholder.min.js'></script>
+        <script type="text/javascript" src='js/bootstrap.calendar.js'></script>
+        <script type="text/javascript" src="js/jquery.countdown.js"></script>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+    </head>
+    <body>
+        <header>
+            <div class='container'>
+                <div class='row'>
+                    <div class='span2'>
+                        <a href="index.html">
+                            <figure>
+                                <!-- <img src="img/logo.png" alt=""> -->
+                                <i class='logo-replacement'></i>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class='span7'>
+                        <nav>
+                            <ul>
+                                <li><a href='index.html' title='Home'> Home </a> </li>
+                                <li><a href='new-albums.html' title='New Albums'>New Albums</a> </li>
+                                <li><a href='tracks.html' title='Tracks'>Tracks</a> </li>
+                                <li class='active'><a href='blog.html' title='Blog'> Blog </a> </li>
+                                <li><a href='online-player.html' title='Online Player'>Online Player</a> </li>
+                                <li><a href='events.html' title='Events'> Events </a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class='span3 search-container'>
+                        <form action="" method="get" accept-charset="utf-8" class='search-form'>
+                            <input type="text" name="search" value="" placeholder="Search" />
+                            <input type='submit' name='submit' value='Search' />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        <section id='music-player'>
+            <div class='container'>
+                <div class='row'>
+                    <div id="jplayer_1" class="jp-jplayer-main"></div>
+                    <div id="jplayer_container" class="jp-audio">
+                        <div class="jp-type-playlist">
+                            <div class="jp-gui jp-interface" style="">
+                                <div class='span4 no-margin'>
+                                    <div class="jp-playlist">
+                                        <ul style="display: block;">
+                                            <li class="jp-playlist-current">
+                                                <div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="1">Cro Magnon Man</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class='span3'>
+                                    <div class="jp-progress">
+                                        <div class="jp-seek-bar">
+                                            <div class="jp-play-bar"></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="jp-current-time"></div>
+                                    <div class="jp-duration"></div>
+                                </div>
+                                <div class='span2'>
+                                    <div class="jp-volume-bar" style="">
+                                        <div class="jp-volume-bar-value"></div>
+                                    </div>
+                                    <ul class="jp-controls">
+                                        <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute" style="">mute</a></li>
+                                        <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute" style="display: none;">unmute</a></li>
+                                        <li class='pull-right'><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume" style="">max volume</a></li>
+                                    </ul>
+                                </div>
+                                <div class="span3">
+                                    <ul class="jp-controls player-controls">
+                                        <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+                                        <li><a href="javascript:;" class="jp-play" tabindex="1" style="">play</a></li>
+                                        <li><a href="javascript:;" class="jp-pause" tabindex="1" style="display: none;">pause</a></li>
+                                        <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+                                        <li><a href='#' title='Add' class='add'>Add</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="jp-no-solution" style="display: none;">
+                                <span>Update Required</span>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='main'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='span9 content'>
+                        <div class='main-top span9'>
+                            <div class='span9 no-margin'>
+                                <h1>mr. Lorem ipsum sit dolor</h1>
+                                <div class='options-line'>
+                                    <div class='breadcrumb-container'>
+                                        <ul class="breadcrumb">
+                                            <li><a href="index.html">Index</a> <span class="divider">&raquo;</span></li>
+                                            <li><a href="blog.html">Blog</a> <span class="divider">&raquo;</span></li>
+                                            <li class="active">mr. Lorem ipsum sit dolor</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='span9 news blog-article no-margin'>
+                            <figure>
+                                <img src='img/blog-article.jpg' alt='' />
+                            </figure>
+                            <h2>mr. Lorem ipsum sit dolor</h2>
+                            <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                            <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et </p>
+                            <blockquote>iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, </blockquote>
+                            <p>omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum </p>
+                        </div>
+                        <div class='article-details span9'>
+                            <a href='#' class='comments span1'>1408</a>
+                            <div class='star-rating span2'>
+                                <a href='#' title='1 star' class='full'>1 star</a>
+                                <a href='#' title='2 stars' class='full'>2 stars</a>
+                                <a href='#' title='3 stars' class='full'>3 stars</a>
+                                <a href='#' title='4 stars' class='full'>4 stars</a>
+                                <a href='#' title='5 stars' class='empty'>5 stars</a>
+                            </div>
+                            <div class='tags span6 no-margin'>
+                                <a href="#"><span>Designer</span></a>
+                                <a href="#"><span>Apps</span></a>
+                                <a href="#"><span>Mattew</span></a>
+                                <a href="#"><span>Love</span></a>
+                                <a href="#"><span>Hobbies</span></a>
+                                <a href="#"><span>Mix</span></a>
+                            </div>
+                        </div>
+                        <div class='comments span9'>
+                            <h1>Comments</h1>
+                            <hr />
+                            <div class='comment'>
+                                <figure>
+                                    <img src='img/avatar.jpg' alt='' />
+                                </figure>
+                                <div class='comment-content'>
+                                    <i class='comment-arrow'></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <div class='bottom'>
+                                        <span class='time'>4 days ago</span>
+                                        <a href="#" class='reply'>Reply with quote</a>
+                                        <div class='star-rating'>
+                                            <a href='#' title='1 star' class='full'>1 star</a>
+                                            <a href='#' title='2 stars' class='full'>2 stars</a>
+                                            <a href='#' title='3 stars' class='full'>3 stars</a>
+                                            <a href='#' title='4 stars' class='full'>4 stars</a>
+                                            <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='comment'>
+                                <figure>
+                                    <img src='img/avatar2.jpg' alt='' />
+                                </figure>
+                                <div class='comment-content'>
+                                    <i class='comment-arrow'></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <div class='bottom'>
+                                        <span class='time'>4 days ago</span>
+                                        <a href="#" class='reply'>Reply with quote</a>
+                                        <div class='star-rating'>
+                                            <a href='#' title='1 star' class='full'>1 star</a>
+                                            <a href='#' title='2 stars' class='full'>2 stars</a>
+                                            <a href='#' title='3 stars' class='full'>3 stars</a>
+                                            <a href='#' title='4 stars' class='full'>4 stars</a>
+                                            <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='comment'>
+                                <figure>
+                                    <img src='img/avatar3.jpg' alt='' />
+                                </figure>
+                                <div class='comment-content'>
+                                    <i class='comment-arrow'></i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <div class='bottom'>
+                                        <span class='time'>4 days ago</span>
+                                        <a href="#" class='reply'>Reply with quote</a>
+                                        <div class='star-rating'>
+                                            <a href='#' title='1 star' class='full'>1 star</a>
+                                            <a href='#' title='2 stars' class='full'>2 stars</a>
+                                            <a href='#' title='3 stars' class='full'>3 stars</a>
+                                            <a href='#' title='4 stars' class='full'>4 stars</a>
+                                            <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='add-comment span9 no-margin'>
+                            <h1>Add a new comment</h1>
+                            <hr />
+                            <div class='form-line'>
+                                <label>Comment:</label>
+                                <div class='line-content'>
+                                    <textarea></textarea>
+                                </div>
+                            </div>
+                            <div class='form-line'>
+                                <label>Rating:</label>
+                                <div class='line-content'>
+                                    <div class='star-rating'>
+                                        <a href='#' title='1 star' class='full'>1 star</a>
+                                        <a href='#' title='2 stars' class='full'>2 stars</a>
+                                        <a href='#' title='3 stars' class='full'>3 stars</a>
+                                        <a href='#' title='4 stars' class='full'>4 stars</a>
+                                        <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                    </div>
+                                    <button class='btn btn-main'>Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='span9 news no-margin homepage'>
+                            <h1>Other posts</h1>
+                            <hr />
+                            <article class='span3'>
+                                <div class='inner'>
+                                    <figure>
+                                        <img src="img/home-article1.jpg" alt="">
+                                    </figure>
+                                    <h2><a href='#'>mr. Lorem ipsum sit dolor</a></h2>
+                                    <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+                                    </p>
+                                </div>
+                                <div class='bottom'>
+                                    <a href='#' class='comments'>1408</a>
+                                    <div class='star-rating'>
+                                        <a href='#' title='1 star' class='full'>1 star</a>
+                                        <a href='#' title='2 stars' class='full'>2 stars</a>
+                                        <a href='#' title='3 stars' class='full'>3 stars</a>
+                                        <a href='#' title='4 stars' class='full'>4 stars</a>
+                                        <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class='span3'>
+                                <div class='inner'>
+                                    <figure>
+                                        <img src="img/home-article2.jpg" alt="">
+                                    </figure>
+                                    <h2><a href='#'>mr. Lorem ipsum sit dolor</a></h2>
+                                    <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+                                    </p>
+                                </div>
+                                <div class='bottom'>
+                                    <a href='#' class='comments'>1408</a>
+                                    <div class='star-rating'>
+                                        <a href='#' title='1 star' class='full'>1 star</a>
+                                        <a href='#' title='2 stars' class='full'>2 stars</a>
+                                        <a href='#' title='3 stars' class='full'>3 stars</a>
+                                        <a href='#' title='4 stars' class='full'>4 stars</a>
+                                        <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class='span3'>
+                                <div class='inner'>
+                                    <figure>
+                                        <img src="img/home-article3.jpg" alt="">
+                                    </figure>
+                                    <h2><a href='#'>mr. Lorem ipsum sit dolor</a></h2>
+                                    <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+                                    </p>
+                                </div>
+                                <div class='bottom'>
+                                    <a href='#' class='comments'>1408</a>
+                                    <div class='star-rating'>
+                                        <a href='#' title='1 star' class='full'>1 star</a>
+                                        <a href='#' title='2 stars' class='full'>2 stars</a>
+                                        <a href='#' title='3 stars' class='full'>3 stars</a>
+                                        <a href='#' title='4 stars' class='full'>4 stars</a>
+                                        <a href='#' title='5 stars' class='empty'>5 stars</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                    <aside class='span3'>
+                        <div class='inner'>
+                            <div class='categories widget'>
+                                <div class='top-line'>
+                                    <h1>Categories</h1>
+                                </div>
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Entertainment</a></li>
+                                        <li><a href="#">Gossips</a></li>
+                                        <li><a href="#">Politics</a></li>
+                                        <li><a href="#">Sports</a></li>
+                                        <li><a href="#">TV Shows</a></li>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Entertainment</a></li>
+                                        <li><a href="#">Gossips</a></li>
+                                        <li><a href="#">Politics</a></li>
+                                        <li><a href="#">Sports</a></li>
+                                        <li><a href="#">TV Shows</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class='register-widget'>
+                                <h1>Create account</h1>
+                                <ul>
+                                    <li>Access to 6000 + songs</li>
+                                    <li>Ability to purchase songs</li>
+                                    <li>Forums and Chat</li>
+                                    <li>Sell your songs</li>
+                                </ul>
+                                <div class='actions'>
+                                    <a href="#" title='Sign in' class='sign-in btn btn-main'>Sign In</a>
+                                    <a href="#" title='Registration' class='registration btn btn-blue'>Registration</a>
+                                </div>
+                                <div class='social-links'>
+                                    <a href="#" title='RSS' class='rss'>RSS</a>
+                                    <a href="#" title='Flickr' class='flickr'>Flickr</a>
+                                    <a href="#" title='Facebook' class='facebook'>Flickr</a>
+                                    <a href="#" title='Google' class='google'>Google</a>
+                                    <a href="#" title='Last FM' class='last-fm'>Last FM</a>
+                                    <a href="#" title='My Space' class='my-space'>My Space</a>
+                                    <a href="#" title='Plant' class='plant'>Plant</a>
+                                    <a href="#" title='Twitter' class='twitter'>Twitter</a>
+                                </div>
+                            </div>
+                            <div class='cart'>
+                                <div class='top-line'>
+                                    <h1>My cart</h1>
+                                </div>
+                                <div class='list-line'>
+                                    <a href="#">1album & 3 Mp3</a> <span>$ 150</span>
+                                </div>
+                                <div class='button-line'>
+                                    <a href='#' title='More info'>More info</a>
+                                </div>
+                            </div>
+                            <a href='#' title='Download application' class='app-link'>
+                                <div class='app-ad'>
+                                    <h3>Download our app for iphone <br /><strong>for free</strong></h3>
+                                </div>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class='container'>
+                <div class='row'>
+                    <div class='span9 footer-big'>
+                        <div class='span6'>
+                            <h1>About This Site</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod tem or incididunt ut labore et dolore mag aliqu. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo equat. 
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod tem or incididunt ut labore et dolore mag aliqu. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo equat. 
+                            </p>
+                            <a href="#" title='More info' class='btn btn-white'>More info</a>
+                        </div>
+                        <div class='span3'>
+                            <h1>Payment Methods</h1>
+                            <div class='payment-links'>
+                                <a href='#' title='Discover' class='discover'>Discover</a>
+                                <a href='#' title='Amex' class='amex'>Amex</a>
+                                <a href='#' title='American Express' class='american-express'>American Express</a>
+                                <a href='#' title='Visa' class='visa'>Visa</a>
+                                <a href='#' title='Pay Pal' class='pay-pal'>Pay Pal</a>
+                                <a href='#' title='Master Card' class='master-card'>Master Card</a>
+                            </div>
+                            <h1>Newsletter</h1>
+                            <form action="" method="post" accept-charset="utf-8">
+                                <input type='email' name='newsletter-email' placeholder='Enter Your E-Mail' />
+                                <input type='submit' name='submit' value='Enter' class='btn btn-white' />
+                            </form>
+                        </div>
+                        <div class='footer-links'>
+                            <ul>
+                                <li class='active'><a href='index.html' title='Home'> Home </a> </li>
+                                <li><a href='new-albums.html' title='New Albums'>New Albums</a> </li>
+                                <li><a href='tracks.html' title='Tracks'>Tracks</a> </li>
+                                <li><a href='blog.html' title='Blog'> Blog </a> </li>
+                                <li><a href='online-player.html' title='Online Player'>Online Player</a> </li>
+                                <li><a href='events.html' title='Events'> Events </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='span3'>
+                        <h1>Contact Us</h1>
+                        <span id="success"></span>
+                        <form id="footer-form" action="" method="post" accept-charset="utf-8">
+                            <input id="mp3_name" type='text' name='contact-name' placeholder='Your Name' />
+                            <input id="mp3_email" type='email' name='contact-email' placeholder='Your E-Mail' />
+                            <textarea id="mp3_message" placeholder='Your Message'></textarea>
+                            <input type='submit' name='submit' value='Send' class='form-submit btn btn-white' />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id='ending-line'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='copyright pull-left span4'>
+                        <span>Mp3Pl &copy; 2012, developed by <a href="http://teothemes.com">TeoThemes</a></span>
+                    </div>
+                    <div class='go-up-container span4'>
+                        <a href='#' title='Go Up' class='go-up'>Go up</a>
+                    </div>
+                    <div class='bottom-logo pull-right span4'>
+                        <a href="#"><img src='img/bottom-logo.png' alt='' /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html> 

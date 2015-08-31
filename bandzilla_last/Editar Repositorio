@@ -1,0 +1,44 @@
+    .playtracker {
+        width: 3px;
+        left:62px;
+        border-right: solid 3px #444;
+        z-index: 2;
+        display: table-cell;
+        position:relative;
+        top: -94px;
+        height: 74px;
+    }
+
+    .audiotrack {
+        height:100px;
+    }
+
+    <div class="audiotrack" id="chartContainer" style="width: 2000px; "></div>
+    <div class="audiotrack" id="chartContainer2" style="width: 2000px; "></div>
+    </div>
+<script>
+    $(document).ready(function() {
+        $('<div class="playtracker"></div>').appendTo('.audiotrack');
+        var filaPlayer = 0;
+
+        $('#omg').click(function(){
+            $('.playtracker').stop();
+            $('.playtracker').css('left', '62px');
+            $('.playtracker').animate({
+                left: "1000px"}, 10000 , "linear" );
+            });
+
+      /* $('.sliderArea rect').mouseup(function(){
+            $("#chartContainer").dxRangeSelector({
+            
+            selectedRangeChanged: function(selectedRange) {     
+            var NwWidth = Globalize.format(selectedRange.startValue);
+            alert("hola" + NwWidth);
+            return NwWidth;
+                }
+             });
+
+            $('.playtracker').css("left","500"+"px");
+        });*/
+    });
+</script>
